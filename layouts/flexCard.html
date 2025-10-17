@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flexbox Card Layout</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      color: #111827;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      flex: 1 1 calc(33.333% - 25px);
+      min-width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-content h3 {
+      color: #4f46e5;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      color: #4b5563;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .card-actions {
+      text-align: right;
+      padding: 15px 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .card-actions button {
+      background: linear-gradient(90deg, #2563eb, #4f46e5);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card-actions button:hover {
+      background: linear-gradient(90deg, #4f46e5, #2563eb);
+    }
+
+    @media (max-width: 992px) {
+      .card {
+        flex: 1 1 calc(50% - 25px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Flexbox Card Layout</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="images/card2.jpg" alt="Card Image 1">
+      <div class="card-content">
+        <h3>Elegant Design</h3>
+        <p>This card demonstrates equal height and flexible alignment using pure flexbox. It maintains structure across all devices.</p>
+      </div>
+      <div class="card-actions">
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/card3.jpg" alt="Card Image 2">
+      <div class="card-content">
+        <h3>Fully Responsive</h3>
+        <p>The cards rearrange automatically into 3 columns on desktop, 2 on tablet, and 1 on mobile for optimal viewing.</p>
+      </div>
+      <div class="card-actions">
+        <button>Learn More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/card.jpg" alt="Card Image 3">
+      <div class="card-content">
+        <h3>Modern Flex Layout</h3>
+        <p>By using flexbox for both the container and card, we achieve consistent height, smooth resizing, and neat alignment.</p>
+      </div>
+      <div class="card-actions">
+        <button>Explore</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

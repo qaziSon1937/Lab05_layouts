@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Property Showcases</title>
+<link rel="stylesheet" href="styles/display.css">
+</head>
+<body>
+  <h1>Display Property Showcase</h1>
+
+   <!-- Block vs Inline vs Inline-block  -->
+  <section>
+    <h2>1. Block vs Inline vs Inline-block</h2>
+    <p>This section compares how different display properties behave.</p>
+
+    <div class="demo-box block">display: block (starts on a new line, takes full width)</div>
+    <div class="demo-box inline">display: inline (flows in same line)</div>
+    <div class="demo-box inline-block">display: inline-block (inline, but accepts width/height)</div>
+  </section>
+
+  <!--  Table Display Without Table Tag -->
+  <section>
+    <h2>2. Table Display (Without Table Markup)</h2>
+    <p>Here, we create a table layout using only divs and display properties.</p>
+
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell"><strong>Header 1</strong></div>
+        <div class="table-cell"><strong>Header 2</strong></div>
+        <div class="table-cell"><strong>Header 3</strong></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Row 1 - Col 1</div>
+        <div class="table-cell">Row 1 - Col 2</div>
+        <div class="table-cell">Row 1 - Col 3</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Row 2 - Col 1</div>
+        <div class="table-cell">Row 2 - Col 2</div>
+        <div class="table-cell">Row 2 - Col 3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Responsive Display Changes -->
+  <section>
+    <h2>3. Responsive Display Changes (Media Queries)</h2>
+    <p>Resize the window to see layout change from row to column on smaller screens.</p>
+
+    <div class="responsive-boxes">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box desktop-only">Box 3 (Desktop Only)</div>
+      <div class="box mobile-only">Box 4 (Mobile Only)</div>
+    </div>
+  </section>
+
+  <!-- 4. Hidden Elements -->
+  <section>
+    <h2>4. Hidden Elements Explanation</h2>
+    <p>These elements appear or disappear depending on screen size.</p>
+
+    <div class="desktop-only">Visible only on Desktop</div>
+    <div class="mobile-only">Visible only on Mobile (screen width ≤ 500px)</div>
+  </section>
+</body>
+</html>

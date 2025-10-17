@@ -1,0 +1,152 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 5px solid #2ecc71;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 3px dashed #aaa;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* === Main Content === */
+.main-content {
+  float: left;
+  width: 70%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  position: relative;
+}
+
+.main-content::before {
+  content: "Main Content Area";
+  position: absolute;
+  top: -14px;
+  left: 10px;
+  background: #007bff;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.sidebar {
+  float: right;
+  width: 25%;
+  background-color: #fafafa;
+  border: 2px solid #e67e22;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.sidebar::before {
+  content: "Sidebar";
+  position: absolute;
+  top: -14px;
+  left: 10px;
+  background: #e67e22;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.article img {
+  float: left;
+  margin: 10px 15px 10px 0;
+  width: 180px;
+  border-radius: 6px;
+  border: 2px solid #2ecc71;
+  position: relative;
+}
+
+.article {
+  position: relative;
+}
+
+.article::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #2ecc71;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.article p {
+  text-align: justify;
+}
+
+.multi-column {
+  column-count: 2;
+  column-gap: 30px;
+  margin-top: 20px;
+  border: 2px dashed #9b59b6;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.multi-column::before {
+  position: absolute;
+  top: -14px;
+  left: 10px;
+  background: #9b59b6;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+
+footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 5px solid #2ecc71;
+}
+
+
+@media (max-width: 800px) {
+  .main-content,
+  .sidebar {
+    float: none;
+    width: 100%;
+  }
+
+  .multi-column {
+    column-count: 1;
+  }
+
+  .article img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+
+  .article::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

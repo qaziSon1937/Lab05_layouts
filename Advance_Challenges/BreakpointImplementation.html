@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Common Breakpoint Implementation</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #222;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #2575fc;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .box {
+      background: #e0ecff;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        background-color: #dbeafe;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #1e3a8a;
+      }
+
+      .box {
+        display: inline-block;
+        width: 45%;
+        background: #bfdbfe;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        background-color: #e0f2fe;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        color: #0369a1;
+      }
+
+      .box {
+        width: 30%;
+        background: #bae6fd;
+      }
+    }
+
+    
+    @media (min-width: 1200px) {
+      body {
+        background-color: #ccfbf1;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        color: #0f766e;
+      }
+
+      .box {
+        width: 22%;
+        background: #99f6e4;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      body {
+        background-color: #ecfccb;
+      }
+
+      h1 {
+        font-size: 2.6rem;
+        color: #4d7c0f;
+      }
+
+      .box {
+        width: 18%;
+        background: #bef264;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Breakpoint Demo</h1>
+  <p>Resize the window to see color and layout changes!</p>
+
+  <div class="box">Mobile Box 1</div>
+  <div class="box">Mobile Box 2</div>
+  <div class="box">Mobile Box 3</div>
+  <div class="box">Mobile Box 4</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Responsive Utility Classes</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f3f4f6;
+      color: #222;
+    }
+
+    h1 {
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      background: #dbeafe;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .hide-mobile {
+      display: none;
+    }
+
+    .show-mobile {
+      display: block;
+    }
+
+  
+    @media (min-width: 768px) {
+      .hide-tablet {
+        display: none;
+      }
+
+      .hide-mobile {
+        display: block;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hide-desktop {
+        display: none;
+      }
+
+      .show-desktop {
+        display: block;
+      }
+    }
+
+    .p-1 { padding: 10px; }
+    .p-2 { padding: 20px; }
+    .m-1 { margin: 10px; }
+    .m-2 { margin: 20px; }
+
+    
+    @media (min-width: 768px) {
+      .p-md-3 { padding: 30px; }
+      .m-md-3 { margin: 30px; }
+    }
+
+    .text-center { text-align: center; }
+    .text-left { text-align: left; }
+    .text-right { text-align: right; }
+
+    @media (min-width: 768px) {
+      .text-md-left { text-align: left; }
+      .text-md-right { text-align: right; }
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      .flex-md-row {
+        flex-direction: row;
+      }
+    }
+
+    .card {
+      background: #93c5fd;
+      color: #fff;
+      padding: 15px;
+      border-radius: 6px;
+      flex: 1 1 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Utility Classes Demo</h1>
+
+  <div class="box show-mobile hide-tablet">📱 Visible only on Mobile</div>
+  <div class="box hide-mobile show-desktop">💻 Visible on Tablet/Desktop</div>
+
+  <div class="box p-1 m-1 p-md-3 m-md-3"> Responsive Spacing Adjusts by Screen</div>
+
+  <div class="box text-center text-md-right"> Text Align: Center (mobile) → Right (tablet+)</div>
+
+  <div class="box flex flex-column flex-md-row">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure CSS Flexbox Navigation System</title>
+ <link rel="stylesheet" href="styles/flexbox.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">FlexNav</div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Web Design</a>
+          <a href="#">UI/UX</a>
+          <a href="#">SEO</a>
+        </div>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="sidebar">
+    <a href="#"> Home</a>
+    <a href="#"> About</a>
+    <a href="#"> Services</a>
+    <a href="#"> Contact</a>
+  </div>
+
+  <main>
+    <h2>Pure CSS Flexbox Navigation System</h2>
+    <ul>
+      <li><b>Horizontal Navigation:</b> Flexbox-based navbar.</li>
+      <li><b>Vertical Sidebar:</b> Flex column layout with smooth slide.</li>
+      <li><b>Hamburger Menu:</b> Checkbox trick (no JS) with transform animation.</li>
+      <li><b>Dropdown Menus:</b> Flex-stacked and adaptive to mobile screens.</li>
+    </ul>
+  </main>
+
+</body>
+</html>

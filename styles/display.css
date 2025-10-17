@@ -1,0 +1,133 @@
+ body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e3a8a;
+    }
+
+    section {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2563eb;
+      border-left: 4px solid #2563eb;
+      padding-left: 10px;
+    }
+
+    /* Block vs Inline vs Inline-block  */
+    .demo-box {
+      background-color: #dbeafe;
+      border: 2px solid #2563eb;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 6px;
+    }
+
+    .block {
+      display: block;
+      width: 200px;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    .inline-block {
+      display: inline-block;
+      width: 200px;
+    }
+
+    /*  Table Display Without Table Tag  */
+    .table-container {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .table-row {
+      display: table-row;
+    }
+
+    .table-cell {
+      display: table-cell;
+      border: 1.5px solid #eeeded;
+      background-color: #b0c5ca;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /*  Responsive Display Changes  */
+    .responsive-boxes {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      flex: 1;
+      background-color: #dcfce7;
+      border: 1px solid #16a34a;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Hidden Elements Demonstration */
+    .desktop-only {
+      display: block;
+      color: #991b1b;
+      font-weight: bold;
+      background: #fee2e2;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .mobile-only {
+      display: none;
+      color: #1e3a8a;
+      font-weight: bold;
+      background: #dbeafe;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    /*  Media Queries  */
+    @media (max-width: 800px) {
+      .responsive-boxes {
+        flex-direction:column;
+      }
+    }
+
+    @media (max-width: 500px) {
+    
+        .desktop-only {
+        display: none;
+      }
+      .mobile-only {
+        display: block;
+      }
+
+      /* .table-container {
+        display: block;
+      }
+
+      .table-row {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .table-cell {
+        display: block;
+      } */

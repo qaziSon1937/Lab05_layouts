@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 14 - Responsive Data Table</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    /* ====== TABLE STYLE ====== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #2c3e50;
+      color: white;
+    }
+
+    tr:hover {
+      background: #f1f1f1;
+    }
+
+    /* ====== TABLE → CARD (Tablet) ====== */
+    @media (max-width: 900px) {
+      table {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      tr {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        width: calc(50% - 15px);
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      td {
+        border: none;
+        padding: 10px 15px;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+
+    /* ====== CARD → STACKED (Mobile) ====== */
+    @media (max-width: 600px) {
+      tbody {
+        flex-direction: column;
+      }
+
+      tr {
+        width: 100%;
+      }
+
+      td {
+        padding: 12px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Responsive Data Table</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Product">Panoramic Display</td>
+        <td data-label="Category">Electronics</td>
+        <td data-label="Price">$999</td>
+        <td data-label="Stock">Available</td>
+        <td data-label="Rating">⭐⭐⭐⭐☆</td>
+      </tr>
+      <tr>
+        <td data-label="Product">Induction-Cooker</td>
+        <td data-label="Category">Electronics</td>
+        <td data-label="Price">$699</td>
+        <td data-label="Stock">Out of Stock</td>
+        <td data-label="Rating">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td data-label="Product">Charger</td>
+        <td data-label="Category">Accessories</td>
+        <td data-label="Price">$875</td>
+        <td data-label="Stock">Unavailable</td>
+        <td data-label="Rating">⭐⭐⭐☆☆</td>
+      </tr>
+      <tr>
+        <td data-label="Product">Smartwatch</td>
+        <td data-label="Category">Wearable</td>
+        <td data-label="Price">$279</td>
+        <td data-label="Stock">Available</td>
+        <td data-label="Rating">⭐⭐⭐⭐☆</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

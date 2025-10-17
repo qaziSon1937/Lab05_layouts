@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float-Based Magazine Layout (Labeled)</title>
+    <link rel="stylesheet" href="styles/float.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Digital Magazine</h1>
+      <p>Float-Based Layout Example.</p>
+    </header>
+
+    <div class="container">
+      <div class="main-content">
+        <h2>Main Article</h2>
+        <div class="article">
+          <img src="images/magazine.jpg" alt="Sample Image" />
+          <p>
+            Welcome to our digital magazine! This article demonstrates how text
+            can wrap neatly around images using the
+            <strong>float</strong> property. The image floats to the left while
+            text flows beside it — just like in printed magazines and
+            newspapers.
+          </p>
+        </div>
+
+        <div class="multi-column">
+          <p>
+            Floats were the first way to create multi-column layouts before
+            Flexbox and Grid existed. Here, we use <code>float: left</code> and
+            <code>float: right</code> to position sections. The
+            <code>column-count</code>
+            property helps split text into columns, giving a real magazine-like
+            look.
+          </p>
+          <p>
+            On smaller screens, media queries make this layout responsive —
+            columns collapse, floats are removed, and the page becomes a single
+            readable column. Resize your browser to see it change!
+          </p>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <h3>Sidebar Content</h3>
+        <p>
+          This is the sidebar floated to the right. It contains extra
+          information, advertisements, or links. When viewed on a smaller
+          screen, this sidebar will appear below the main content.
+        </p>
+      </aside>
+    </div>
+
+    <footer>
+      <p>© 2025 Digital Magazine | Qazi Abdul Qavi. </p>
+    </footer>
+  </body>
+</html>
